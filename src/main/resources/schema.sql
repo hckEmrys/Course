@@ -6,10 +6,14 @@ college varchar(100)
 );
 
 
+
+
+
 create table course
 (
 courseID int primary key,
-courseName varchar(100) not null
+courseName varchar(100) not null,
+lecturer varchar(100)
 );
 
 
@@ -23,6 +27,9 @@ foreign key (courseID) references course(courseID) on DELETE CASCADE
 );
 
 
+
+
+
 create table review
 (
 reviewId int primary key,
@@ -30,5 +37,6 @@ review varchar(255) not null,
 courseID int,
 foreign key(courseID) References course(courseID) on Delete CASCADE
 );
+
 
 
